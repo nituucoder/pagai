@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Street Light Detection System - Login</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#f0f2f5;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+  .box{background:#fff;padding:30px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);width:300px}
+  h2{margin-top:0;text-align:center}
+  input{width:100%;padding:8px;margin:8px 0;box-sizing:border-box}
+  button{width:100%;padding:10px;background:#1f4e79;color:#fff;border:0;border-radius:4px;cursor:pointer}
+  #msg{color:red;text-align:center;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>Street Light Detection System</h2>
+  <input type="text" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button id="loginBtn" onclick="login()">Login</button>
+  <div id="msg"></div>
+</div>
+<script>
+function login(){
+  var e=document.getElementById('email').value;
+  var p=document.getElementById('password').value;
+  if(e==='admin@streetlight.com' && p==='Admin@123'){
+    window.location.href='dashboard.html';
+  } else {
+    document.getElementById('msg').innerText='Invalid Credentials';
+  }
+}
+</script>
+</body>
+</html>
